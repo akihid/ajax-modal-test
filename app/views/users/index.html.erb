@@ -16,6 +16,7 @@
         <td><%= user.name %></td>
         <td><%= link_to 'Show', user %></td>
         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+        <div id="user-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -24,4 +25,5 @@
 
 <br>
 
-<%= link_to 'New User', new_user_path, class: "btn btn-lg btn-primary" %>
+<%= link_to 'New User', new_user_path, remote: true, class: "btn btn-lg btn-primary" %>
+<div id="user-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true"></div>
